@@ -17,3 +17,10 @@ if(MSVC)
 endif()
 
 add_subdirectory(core)
+
+option(BUDZET_BUDUJ_TESTY "Buduj testy jednostkowe" ON)
+
+if(BUDZET_BUDUJ_TESTY)
+    enable_testing()
+    add_subdirectory(tests)
+endif()
