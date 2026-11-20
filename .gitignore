@@ -1,0 +1,33 @@
+# Wygenerowane z pomocą: Claude – szablon .gitignore dla C++/CMake/CLion/MSVC, sprawdzony ręcznie
+
+# Katalogi budowania (CMake, CLion, Visual Studio)
+build/
+cmake-build-*/
+out/
+
+# Pliki IDE
+.idea/
+.vscode/
+.vs/
+
+# Pliki wynikowe kompilacji
+*.o
+*.obj
+*.exe
+*.dll
+*.lib
+*.a
+*.pdb
+*.ilk
+
+# Pliki CMake generowane lokalnie
+CMakeCache.txt
+CMakeFiles/
+CMakeUserPresets.json
+
+# Prywatne dane finansowe (prawdziwe wyciągi) – nigdy do repozytorium
+dane_prywatne/
+
+# Pliki systemowe
+Thumbs.db
+.DS_Store
