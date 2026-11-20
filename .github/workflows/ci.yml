@@ -1,0 +1,25 @@
+# Wygenerowane z pomocą: Claude – pipeline CI (budowanie i testy na Windows), sprawdzony ręcznie
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  budowanie-i-testy:
+    runs-on: windows-latest
+
+    steps:
+      - name: Pobranie kodu
+        uses: actions/checkout@v5
+
+      - name: Konfiguracja CMake
+        run: cmake -S . -B build
+
+      - name: Budowanie
+        run: cmake --build build --config Release
+
+      - name: Testy
+        run: ctest --test-dir build -C Release --output-on-failure
